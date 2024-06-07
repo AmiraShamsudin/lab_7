@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-<h2 style="text-align: justify">User Information</h2>
+<h2>User Information</h2>
 
 <table>
     <tr>
