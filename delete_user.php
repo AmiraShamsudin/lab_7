@@ -1,43 +1,42 @@
 <?php
 session_start();
 
+// Check if the user is logged in
 if (!isset($_SESSION['matric'])) {
-    header(Location: login_page.php);
+    header("Location: login_page.php");
     exit();
 }
 
-$servername ="localhost";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "Lab_7";
 
-$conn = new mysqli ($servername, $username, $password, $dbname)
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error){
+// Check connection
+if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['matric'])) {
     $matric = $_GET['matric'];
 
+    // SQL to delete a record
+    $sql = "DELETE FROM users WHERE matric = ?";
 
-    $database = new Database();
-    $db = $database->getConnection();
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $matric);
 
-    
-    $user = new User($db);
-
-    
-    $deleted = $user->deleteUser($matric);
-
-    if ($deleted) {
+    if ($stmt->execute()) {
         echo "User with matric number $matric has been deleted successfully.";
     } else {
         echo "Failed to delete user with matric number $matric.";
     }
 
-    n
-    $db->close();
+    $stmt->close();
 }
+
+$conn->close();
 ?>
