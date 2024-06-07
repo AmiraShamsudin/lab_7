@@ -1,0 +1,139 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f8ff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    min-height: 100vh; /* Ensure full height of viewport */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-wrapper {
+    background: #ffffff; 
+    padding: 30px;
+    border: 1px solid #87ceeb; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #000080; 
+    margin-top: 0;
+    text-align: center;
+    padding-left: 50px;
+    height: 700px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000080; 
+    text-align: left;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #87ceeb; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4169e1; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0000cd; 
+}
+
+p {
+    margin-top: 235px;
+    font-size: 20px;
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+a {
+    color: #4169e1; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    height: 20px;
+    width: 75%;
+    margin-top: 0px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #87ceeb; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #eff4f8; 
+}
+
+.action-buttons a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #87ceeb;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000080; 
+}
+
+.action-buttons a.update {
+    background-color: #5bc0de;
+    color: #ffffff; 
+}
+
+.action-buttons a.update:hover {
+    background-color: #31b0d5; 
+}
+
+.action-buttons a.delete {
+    background-color: #d9534f; 
+    color: #ffffff; 
+}
+
+.action-buttons a.delete:hover {
+    background-color: #c9302c; 
+}
