@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['matric'])) {
-    header(Location: loging_page.php);
+    header(Location: login_page.php);
     exit();
 }
 
@@ -14,7 +14,7 @@ $dbname = "Lab_7";
 $conn = new mysqli ($servername, $username, $password, $dbname)
 
 if ($conn->connect_error){
-    die("Connection failed: " $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
